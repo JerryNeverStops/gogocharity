@@ -1,0 +1,16 @@
+export default function Home() {
+  return (<>
+<header className="wrap nav"><a className="brand" href="#">GO<span>♥</span>GO</a><nav className="navlinks"><a href="#mission">初衷</a><a href="#transparency">公开账本</a><a className="pill" href="#verify">验证信息</a></nav></header>
+  <main>
+    <section className="wrap hero">
+      <div><div className="eyebrow">Guangzhou Together · 09.14</div><h1>GO<span className="heart">♥</span>GO</h1><p className="lead">献给在广州大学城 9 月 14 日事件中受到影响的人。一个由社区独立发起、以公开记录为承诺的纪念项目。</p></div>
+      <aside className="hero-note"><strong>拟定 3% 交易税</strong><p>拟全部进入独立公开的援助金库。受赠渠道核实前，资金不会以“已捐赠”名义对外宣传。</p></aside>
+    </section>
+    <section className="statement" id="mission"><div className="wrap statement-grid"><div className="kicker">Why we are here</div><div><h2>记住受影响的人，<br />把每一笔承诺留在链上。</h2><p>据广州番禺公安 2026 年 9 月 14 日通报，小谷围街发生持刀伤人事件，嫌疑人已被抓获，伤者经救治均无生命危险，案件仍在进一步侦办。GOGO 不代表受害者、商场、学校、警方或政府机构。</p></div></div></section>
+    <section className="wrap section"><div className="section-head"><h2>资金如何流转</h2><p>税费、余额、捐赠与证明均公开展示。任何人都可以独立核验，而不是只相信项目方的一句话。</p></div><div className="flow"><article className="step"><span className="num">01 · TRADE</span><div><h3>产生交易税</h3><p>拟对适用交易收取 3% 税费，最终以已部署合约为准。</p></div><span className="arrow">→</span></article><article className="step"><span className="num">02 · TREASURY</span><div><h3>进入公开金库</h3><p>与部署及个人交易钱包分离，余额可在 BscScan 查看。</p></div><span className="arrow">→</span></article><article className="step"><span className="num">03 · ASSISTANCE</span><div><h3>核实后捐出</h3><p>公开受赠方、交易哈希及可披露的收款证明。</p></div><span className="arrow">✓</span></article></div></section>
+    <section className="wrap section" id="transparency"><div className="section-head"><h2>公开账本</h2><p>尚未接入链上数据；税费、捐赠及余额均待核实，地址确认后更新。</p></div><div className="ledger"><div className="metric"><small>累计税费</small><b>待核实</b></div><div className="metric"><small>累计捐赠</small><b>待核实</b></div><div className="metric"><small>金库余额</small><b>待核实</b></div></div><div className="records"><div className="record"><strong>首次捐赠记录</strong><span>受赠渠道待核实</span><span>交易哈希待公布</span><em className="pending">待更新</em></div></div><div className="notice"><strong>透明度原则</strong><p>在出现经过核实的受赠渠道以前，金库中的金额只称为“待援助资金”，不称为“已捐款”，也不承诺可以直接转交给某位具体受害者。</p></div></section>
+    <section className="wrap section" id="verify"><div className="section-head"><h2>验证信息</h2><p>发布前补全以下地址。请勿相信私信中出现的其他合约或收款地址。</p></div><div className="details"><div className="detail"><div className="detail-label">GOGO 合约地址</div><code>发布后公开 / To be published</code></div><div className="detail"><div className="detail-label">Charity Treasury</div><code>启用税费前公开 / To be published</code></div><div className="detail"><div className="detail-label">Network</div><code>BNB Smart Chain</code></div><div className="detail"><div className="detail-label">Tax</div><code>拟定 3% · 全部进入金库（待合约核实）</code></div></div></section>
+  </main>
+  <footer className="wrap footer"><div><strong>GOGO — Guangzhou Together</strong>Independent community initiative · 2026</div><div><strong>重要声明</strong>本项目并非官方募捐或投资产品，不与受害者、GOGO 新天地、任何高校、警方或政府机构存在隶属或授权关系。加密资产风险极高，请勿将购买代币视为捐赠的替代方式。</div></footer>
+  </>);
+}
