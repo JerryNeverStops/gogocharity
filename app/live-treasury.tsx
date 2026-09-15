@@ -25,10 +25,10 @@ export default function LiveTreasury() {
     refresh();
     return () => { controller.abort(); clearTimeout(timer); };
   }, []);
-  const balance = data ? data.balance.replace(/0+$/, "").replace(/\.$/, "") : "—";
+  const balance = data ? Number(data.balance).toFixed(6) : "—";
   return <div className="live-treasury">
     <div className="live-heading"><strong>金库链上余额</strong><span role="status" className={failed ? "live-warning" : "status"}>{failed ? "更新失败 · 暂勿视为实时数据" : data ? "自动更新 · 每 30 秒刷新" : "正在读取链上数据…"}</span></div>
-    <div className="live-balance">{balance} <small>BNB</small></div>
+    <div className="live-balance" title={data ? `${data.balance} BNB` : undefined}>{balance} <small>BNB</small></div>
     {data && <p>数据获取时间：{new Date(data.updatedAt).toLocaleString("zh-CN", { timeZone: "Asia/Shanghai", hour12: false })}（北京时间）<br />区块：<a href={`https://bscscan.com/block/${data.block}`} target="_blank" rel="noopener noreferrer">{data.block}</a>{failed && " · 显示最后一次成功读取的余额"}</p>}
     <p>余额包含钱包中的所有原生 BNB，不等于累计税费或已捐赠金额。余额读取自最新区块，可能随链上确认发生变化。</p>
     <a href="https://bscscan.com/address/0x92a1556D3d13a7816710dc47984893cE222535f2" target="_blank" rel="noopener noreferrer">查看钱包交易记录 ↗</a>
